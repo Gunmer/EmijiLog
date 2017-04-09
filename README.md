@@ -22,7 +22,7 @@ pod "EmojiLog"
 
 ## Author
 
-Gunmer, cristiam.sosa@innocv.com
+Gunmer, csosaur@gmail.com
 
 ## License
 
