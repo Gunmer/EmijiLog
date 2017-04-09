@@ -9,23 +9,23 @@ public class Logger {
         self.className = className
     }
     
-    public func debug(message: String, functionName: String = #function) {
-        self.printTrace(level: .debug, message: message, functionName: functionName)
+    public func debug(message: String, functionName: String = #function, line: Int = #line) {
+        self.printTrace(level: .debug, message: message, functionName: functionName, line: line)
     }
     
-    public func info(message: String, functionName: String = #function) {
-        self.printTrace(level: .info, message: message, functionName: functionName)
+    public func info(message: String, functionName: String = #function, line: Int = #line) {
+        self.printTrace(level: .info, message: message, functionName: functionName, line: line)
     }
     
-    public func warning(message: String, functionName: String = #function) {
-        self.printTrace(level: .waring, message: message, functionName: functionName)
+    public func warning(message: String, functionName: String = #function, line: Int = #line) {
+        self.printTrace(level: .waring, message: message, functionName: functionName, line: line)
     }
     
-    public func error(message: String, functionName: String = #function) {
-        self.printTrace(level: .error, message: message, functionName: functionName)
+    public func error(message: String, functionName: String = #function, line: Int = #line) {
+        self.printTrace(level: .error, message: message, functionName: functionName, line: line)
     }
     
-    private func printTrace(level: LogLevel,message: String, functionName: String = #function) {
+    private func printTrace(level: LogLevel,message: String, functionName: String, line: Int) {
         let emoji = Logger.configuration.emojiMap.map(level: level)
         let trace = Logger.configuration.traceBuilder
             .add(emoji: emoji)
@@ -33,6 +33,7 @@ public class Logger {
             .add(date: NSDate())
             .add(className: className)
             .add(functionName: functionName)
+            .add(line:line)
             .add(message: message)
             .build()
         
