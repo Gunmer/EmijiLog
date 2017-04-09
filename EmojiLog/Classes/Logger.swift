@@ -27,6 +27,10 @@ public class Logger {
     }
     
     private func printTrace(level: LogLevel,message: String, file: String, functionName: String, line: Int) {
+        if configuration.disable {
+            return
+        }
+        
         if level.rawValue < configuration.minLevel.rawValue {
             return
         }

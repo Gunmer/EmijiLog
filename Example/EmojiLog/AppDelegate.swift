@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //Logger.configuration.change(emojiMap: SmileEmojiMap())
         //Logger.configuration.change(minLevel: .error)
+        //Logger.configuration.change(disable: true)
         return true
     }
 

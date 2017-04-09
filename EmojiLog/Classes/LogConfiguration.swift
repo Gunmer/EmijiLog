@@ -6,12 +6,14 @@ public class EmojiLogConfiguration {
     var emojiMap: EmojiMap
     var traceBuilder: TraceBuilder
     var minLevel: LogLevel
+    var disable: Bool
     
     init() {
         printer = PrinterDefault()
         emojiMap = EmojiMapDefault()
         traceBuilder = TraceBuilderDefault()
         minLevel = .debug
+        disable = false
     }
     
     public func change(printer: Printer) {
@@ -28,6 +30,10 @@ public class EmojiLogConfiguration {
     
     public func change(minLevel: LogLevel) {
         self.minLevel = minLevel
+    }
+    
+    public func change(disable: Bool) {
+        self.disable = disable
     }
     
 }
