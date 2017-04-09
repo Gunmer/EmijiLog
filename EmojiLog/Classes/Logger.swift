@@ -26,7 +26,7 @@ public class Logger {
         self.printTrace(level: .error, message: message, file: file, functionName: functionName, line: line)
     }
     
-    private func printTrace(level: LogLevel,message: String, file: String, functionName: String, line: Int) {
+    private func printTrace(level level: LogLevel,message: String, file: String, functionName: String, line: Int) {
         if configuration.disable {
             return
         }
@@ -36,7 +36,7 @@ public class Logger {
         }
         
         if className.isEmpty {
-            className = file.components(separatedBy: "/").last!.replacingOccurrences(of: ".swift", with: "")
+            className = file.componentsSeparatedByString("/").last!.stringByReplacingOccurrencesOfString(".swift", withString: "")
         }
         
         let emoji = configuration.emojiMap.map(level: level)
@@ -57,7 +57,7 @@ public class Logger {
 extension Logger {
     private(set) public static var configuration = EmojiLogConfiguration()
     
-    public static func getLogWith(className: String) -> Logger {
+    public static func getLogWith(className className: String) -> Logger {
         return Logger(className: className, configuration: configuration)
     }
     

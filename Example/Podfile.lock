@@ -1,37 +1,37 @@
 PODS:
-  - EmojiLog (0.1.0)
+  - EmojiLog (1.0.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - Nimble (5.1.1)
+  - Nimble (4.1.0)
   - Nimble-Snapshots (4.4.0):
     - Nimble-Snapshots/Core (= 4.4.0)
   - Nimble-Snapshots/Core (4.4.0):
     - FBSnapshotTestCase (~> 2.0)
     - Nimble
     - Quick
-  - Quick (1.0.0)
+  - Quick (0.9.3)
 
 DEPENDENCIES:
   - EmojiLog (from `../`)
   - FBSnapshotTestCase
-  - Nimble (~> 5.1.1)
+  - Nimble (~> 4.1.0)
   - Nimble-Snapshots
-  - Quick (~> 1.0.0)
+  - Quick (~> 0.9.3)
 
 EXTERNAL SOURCES:
   EmojiLog:
     :path: ../
 
 SPEC CHECKSUMS:
-  EmojiLog: 2321ad3fffdd15e302a57ead8253df503c8e7fb8
+  EmojiLog: 5f2a3dca776680914b13c3dbee0618165e1ecedb
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
+  Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
-  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
 
-PODFILE CHECKSUM: e5bbb48d5032f965e976389101c63db2271b7712
+PODFILE CHECKSUM: afa77b7011cdbd6361078067eeaa685df0087e0b
 
 COCOAPODS: 1.2.0

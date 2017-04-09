@@ -6,34 +6,34 @@ class ViewController: UIViewController, Loggable {
     
     override func loadView() {
         super.loadView()
-        log.debug(message: "loadView")
-        log.info(message: "loadView")
-        log.warning(message: "loadView")
-        log.error(message: "loadView")
+        log.debug("loadView")
+        log.info("loadView")
+        log.warning("loadView")
+        log.error("loadView")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        log.debug(message: "viewDidLoad")
-        log.info(message: "viewDidLoad")
-        log.warning(message: "viewDidLoad")
-        log.error(message: "viewDidLoad")
+        log.debug("viewDidLoad")
+        log.info("viewDidLoad")
+        log.warning("viewDidLoad")
+        log.error("viewDidLoad")
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        log.debug(message: "viewWillAppear")
-        log.info(message: "viewWillAppear")
-        log.warning(message: "viewWillAppear")
-        log.error(message: "viewWillAppear")
+        log.debug("viewWillAppear")
+        log.info("viewWillAppear")
+        log.warning("viewWillAppear")
+        log.error("viewWillAppear")
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        log.debug(message: "viewDidAppear")
-        log.info(message: "viewDidAppear")
-        log.warning(message: "viewDidAppear")
-        log.error(message: "viewDidAppear")
+        log.debug("viewDidAppear")
+        log.info("viewDidAppear")
+        log.warning("viewDidAppear")
+        log.error("viewDidAppear")
     }
     
     override func didReceiveMemoryWarning() {

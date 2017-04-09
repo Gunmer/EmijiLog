@@ -6,8 +6,8 @@ target 'EmojiLog_Example' do
   target 'EmojiLog_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 1.0.0'
-  pod 'Nimble', '~> 5.1.1'
+    pod 'Quick', '~> 0.9.3'
+  pod 'Nimble', '~> 4.1.0'
   pod 'FBSnapshotTestCase'
   pod 'Nimble-Snapshots'
   end

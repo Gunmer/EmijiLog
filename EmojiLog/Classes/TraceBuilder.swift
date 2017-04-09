@@ -1,13 +1,13 @@
 
 public protocol TraceBuilder {
-    func add(emoji: String) -> Self
-    func add(level: LogLevel) -> Self
-    func add(date: NSDate) -> Self
-    func add(className: String) -> Self
-    func add(functionName: String) -> Self
-    func add(message: String) -> Self
-    func add(dateFormat: String) -> Self
-    func add(line: Int) -> Self
+    func add(emoji emoji: String) -> Self
+    func add(level level: LogLevel) -> Self
+    func add(date date: NSDate) -> Self
+    func add(className className: String) -> Self
+    func add(functionName functionName: String) -> Self
+    func add(message message: String) -> Self
+    func add(dateFormat dateFormat: String) -> Self
+    func add(line line: Int) -> Self
     
     func build() -> String
 }
@@ -22,53 +22,55 @@ class TraceBuilderDefault: TraceBuilder {
     private var dateFormat = "dd/MM/yyyy HH:mm:ss:SSS"
     private var line = 0
     
-    func add(className: String) -> Self {
+    func add(className className: String) -> Self {
         self.className = className
         return self
     }
     
-    func add(date: NSDate) -> Self {
+    func add(date date: NSDate) -> Self {
         self.date = date
         return self
     }
     
-    func add(emoji: String) -> Self {
+    func add(emoji emoji: String) -> Self {
         self.emoji = emoji
         return self
     }
     
-    func add(functionName: String) -> Self {
+    func add(functionName functionName: String) -> Self {
         if functionName.hasSuffix("()") {
-            self.functionName = functionName.replacingOccurrences(of: "()", with: "")
+            self.functionName = functionName.stringByReplacingOccurrencesOfString("()", withString: "")
         } else {
             self.functionName = functionName
         }
         return self
     }
     
-    func add(level: LogLevel) -> Self {
+    func add(level level: LogLevel) -> Self {
         self.level = level
         return self
     }
     
-    func add(message: String) -> Self {
+    func add(message message: String) -> Self {
         self.message = message
         return self
     }
     
-    func add(dateFormat: String) -> Self {
+    func add(dateFormat dateFormat: String) -> Self {
         self.dateFormat = dateFormat
         return self
     }
     
-    func add(line: Int) -> Self {
+    func add(line line: Int) -> Self {
         self.line = line
         return self
     }
     func build() -> String {
-        let formater = DateFormatter()
+        let formater = NSDateFormatter()
         formater.dateFormat = dateFormat
         
-        return "\(emoji) |\(level.initial)| \(formater.string(from: date as Date)) -> \(className).\(functionName)[\(line)]: \(message)"
+        let stringDate = formater.stringFromDate(date)
+        
+        return "\(emoji) |\(level.initial)| \(stringDate) -> \(className).\(functionName)[\(line)]: \(message)"
     }
 }

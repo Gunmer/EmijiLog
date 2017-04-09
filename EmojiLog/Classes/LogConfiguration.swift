@@ -16,23 +16,23 @@ public class EmojiLogConfiguration {
         disable = false
     }
     
-    public func change(printer: Printer) {
+    public func change(printer printer: Printer) {
         self.printer = printer
     }
     
-    public func change(emojiMap: EmojiMap) {
+    public func change(emojiMap emojiMap: EmojiMap) {
         self.emojiMap = emojiMap
     }
     
-    public func change(traceBuilder: TraceBuilder) {
+    public func change(traceBuilder traceBuilder: TraceBuilder) {
         self.traceBuilder = traceBuilder
     }
     
-    public func change(minLevel: LogLevel) {
+    public func change(minLevel minLevel: LogLevel) {
         self.minLevel = minLevel
     }
     
-    public func change(disable: Bool) {
+    public func change(disable disable: Bool) {
         self.disable = disable
     }
     
