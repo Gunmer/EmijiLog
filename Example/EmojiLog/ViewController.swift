@@ -4,7 +4,7 @@ import EmojiLog
 
 class ViewController: UIViewController {
     
-    let log = Logger(className: "ViewController")
+    let log = Logger()
 
     override func loadView() {
         super.loadView()
