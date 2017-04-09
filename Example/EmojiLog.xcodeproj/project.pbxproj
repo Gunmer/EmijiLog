@@ -29,8 +29,8 @@
 
 /* Begin PBXFileReference section */
 		007A2329DED24E5E38173018 /* Pods-EmojiLog_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiLog_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmojiLog_Tests/Pods-EmojiLog_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1AD66770790436F73D7649D0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		2AD987215BD1CAB4520481A9 /* EmojiLog.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EmojiLog.podspec; path = ../EmojiLog.podspec; sourceTree = "<group>"; };
+		1AD66770790436F73D7649D0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2AD987215BD1CAB4520481A9 /* EmojiLog.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EmojiLog.podspec; path = ../EmojiLog.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5046D9A9993CC63DADDD8DC1 /* Pods_EmojiLog_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiLog_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* EmojiLog_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiLog_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		62E9D8647EF16179C77BC091 /* Pods-EmojiLog_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiLog_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojiLog_Tests/Pods-EmojiLog_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		87E2F6797E5800437980B47D /* Pods_EmojiLog_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiLog_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B0BD425724A05C0E78E8258 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8B0BD425724A05C0E78E8258 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A75C46CDD8336C86BAACC7C5 /* Pods-EmojiLog_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiLog_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojiLog_Example/Pods-EmojiLog_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BD7477569D934082D65651C6 /* Pods-EmojiLog_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiLog_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmojiLog_Example/Pods-EmojiLog_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
