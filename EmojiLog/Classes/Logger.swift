@@ -2,13 +2,12 @@
 import Foundation
 
 public class Logger {
-    var className = ""
-    public static var configuration = EmojiLogConfiguration()
+    var className: String
+    var configuration: EmojiLogConfiguration
     
-    public init() {}
-    
-    public init(className: String) {
+    init(className: String, configuration: EmojiLogConfiguration) {
         self.className = className
+        self.configuration = configuration
     }
     
     public func debug(message: String, file: String = #file, functionName: String = #function, line: Int = #line) {
@@ -28,12 +27,16 @@ public class Logger {
     }
     
     private func printTrace(level: LogLevel,message: String, file: String, functionName: String, line: Int) {
+        if level.rawValue < configuration.minLevel.rawValue {
+            return
+        }
+        
         if className.isEmpty {
             className = file.components(separatedBy: "/").last!.replacingOccurrences(of: ".swift", with: "")
         }
         
-        let emoji = Logger.configuration.emojiMap.map(level: level)
-        let trace = Logger.configuration.traceBuilder
+        let emoji = configuration.emojiMap.map(level: level)
+        let trace = configuration.traceBuilder
             .add(emoji: emoji)
             .add(level: level)
             .add(date: NSDate())
@@ -43,6 +46,19 @@ public class Logger {
             .add(message: message)
             .build()
         
-        Logger.configuration.printer.printTrace(trace: trace)
+        configuration.printer.printTrace(trace: trace)
     }
+}
+
+extension Logger {
+    private(set) public static var configuration = EmojiLogConfiguration()
+    
+    public static func getLogWith(className: String) -> Logger {
+        return Logger(className: className, configuration: configuration)
+    }
+    
+    public static func getLog() -> Logger {
+        return Logger(className: "", configuration: configuration)
+    }
+    
 }

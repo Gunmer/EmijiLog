@@ -1,10 +1,5 @@
 # EmojiLog
 
-[![CI Status](http://img.shields.io/travis/Gunmer/EmojiLog.svg?style=flat)](https://travis-ci.org/Gunmer/EmojiLog)
-[![Version](https://img.shields.io/cocoapods/v/EmojiLog.svg?style=flat)](http://cocoapods.org/pods/EmojiLog)
-[![License](https://img.shields.io/cocoapods/l/EmojiLog.svg?style=flat)](http://cocoapods.org/pods/EmojiLog)
-[![Platform](https://img.shields.io/cocoapods/p/EmojiLog.svg?style=flat)](http://cocoapods.org/pods/EmojiLog)
-
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

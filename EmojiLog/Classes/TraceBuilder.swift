@@ -69,6 +69,6 @@ class TraceBuilderDefault: TraceBuilder {
         let formater = DateFormatter()
         formater.dateFormat = dateFormat
         
-        return "\(emoji) |\(level.rawValue)| \(formater.string(from: date as Date)) -> \(className).\(functionName)[\(line)]: \(message)"
+        return "\(emoji) |\(level.initial)| \(formater.string(from: date as Date)) -> \(className).\(functionName)[\(line)]: \(message)"
     }
 }
