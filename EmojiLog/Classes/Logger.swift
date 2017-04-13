@@ -2,8 +2,8 @@
 import Foundation
 
 public class Logger {
-    var className: String
-    var configuration: EmojiLogConfiguration
+    private var className: String
+    private var configuration: EmojiLogConfiguration
     
     init(className: String, configuration: EmojiLogConfiguration) {
         self.className = className
