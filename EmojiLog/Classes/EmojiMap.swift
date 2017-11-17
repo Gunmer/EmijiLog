@@ -1,13 +1,13 @@
 
 public protocol EmojiMap {
     init()
-    func map(level level: LogLevel) -> String
+    func map(level: LogLevel) -> String
 }
 
 class EmojiMapDefault: EmojiMap {
     required init() {}
     
-    func map(level level: LogLevel) -> String {
+    func map(level: LogLevel) -> String {
         switch level {
         case .debug: return "💬"
         case .info: return "🖥"
@@ -20,7 +20,7 @@ class EmojiMapDefault: EmojiMap {
 public final class SmileEmojiMap: EmojiMap {
     public init() {}
     
-    public func map(level level: LogLevel) -> String {
+    public func map(level: LogLevel) -> String {
         switch level {
         case .debug: return "🤓"
         case .info: return "😎"

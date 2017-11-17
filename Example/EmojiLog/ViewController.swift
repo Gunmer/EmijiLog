@@ -20,7 +20,7 @@ class ViewController: UIViewController, Loggable {
         log.error("viewDidLoad")
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         log.debug("viewWillAppear")
         log.info("viewWillAppear")
@@ -28,7 +28,7 @@ class ViewController: UIViewController, Loggable {
         log.error("viewWillAppear")
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         log.debug("viewDidAppear")
         log.info("viewDidAppear")

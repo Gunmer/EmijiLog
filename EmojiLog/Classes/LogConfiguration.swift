@@ -1,7 +1,7 @@
 
 import Foundation
 
-public class EmojiLogConfiguration {
+open class EmojiLogConfiguration {
     var printer: Printer
     var emojiMap: EmojiMap
     var traceBuilder: TraceBuilder
@@ -16,23 +16,23 @@ public class EmojiLogConfiguration {
         disable = false
     }
     
-    public func change(printer printer: Printer) {
+    open func change(printer: Printer) {
         self.printer = printer
     }
     
-    public func change(emojiMap emojiMap: EmojiMap) {
+    open func change(emojiMap: EmojiMap) {
         self.emojiMap = emojiMap
     }
     
-    public func change(traceBuilder traceBuilder: TraceBuilder) {
+    open func change(traceBuilder: TraceBuilder) {
         self.traceBuilder = traceBuilder
     }
     
-    public func change(minLevel minLevel: LogLevel) {
+    open func change(minLevel: LogLevel) {
         self.minLevel = minLevel
     }
     
-    public func change(disable disable: Bool) {
+    open func change(disable: Bool) {
         self.disable = disable
     }
     
