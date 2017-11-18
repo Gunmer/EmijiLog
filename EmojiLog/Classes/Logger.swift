@@ -2,41 +2,37 @@
 import Foundation
 
 open class Logger {
-    fileprivate var className: String
-    fileprivate var configuration: EmojiLogConfiguration
+    let className: String
+    let configuration: EmojiLogConfiguration
     
     init(className: String, configuration: EmojiLogConfiguration) {
         self.className = className
         self.configuration = configuration
     }
     
-    open func debug(_ message: String, file: String = #file, functionName: String = #function, line: Int = #line) {
-        self.printTrace(level: .debug, message: message, file: file, functionName: functionName, line: line)
+    open func debug(_ message: String, functionName: String = #function, line: Int = #line) {
+        self.printTrace(level: .debug, message: message, functionName: functionName, line: line)
     }
     
-    open func info(_ message: String, file: String = #file, functionName: String = #function, line: Int = #line) {
-        self.printTrace(level: .info, message: message, file: file, functionName: functionName, line: line)
+    open func info(_ message: String, functionName: String = #function, line: Int = #line) {
+        self.printTrace(level: .info, message: message, functionName: functionName, line: line)
     }
     
-    open func warning(_ message: String, file: String = #file, functionName: String = #function, line: Int = #line) {
-        self.printTrace(level: .waring, message: message, file: file, functionName: functionName, line: line)
+    open func warning(_ message: String, functionName: String = #function, line: Int = #line) {
+        self.printTrace(level: .waring, message: message, functionName: functionName, line: line)
     }
     
-    open func error(_ message: String, file: String = #file, functionName: String = #function, line: Int = #line) {
-        self.printTrace(level: .error, message: message, file: file, functionName: functionName, line: line)
+    open func error(_ message: String, functionName: String = #function, line: Int = #line) {
+        self.printTrace(level: .error, message: message, functionName: functionName, line: line)
     }
     
-    fileprivate func printTrace(level: LogLevel,message: String, file: String, functionName: String, line: Int) {
+    fileprivate func printTrace(level: LogLevel,message: String, functionName: String, line: Int) {
         if configuration.disable {
             return
         }
         
         if level.rawValue < configuration.minLevel.rawValue {
             return
-        }
-        
-        if className.isEmpty {
-            className = file.components(separatedBy: "/").last!.replacingOccurrences(of: ".swift", with: "")
         }
         
         let emoji = configuration.emojiMap.map(level: level)
@@ -57,12 +53,8 @@ open class Logger {
 extension Logger {
     fileprivate(set) public static var configuration = EmojiLogConfiguration()
     
-    public static func getLogWith(className: String) -> Logger {
-        return Logger(className: className, configuration: configuration)
-    }
-    
-    public static func getLog() -> Logger {
-        return Logger(className: "", configuration: configuration)
+    public static func getLog(logged: Any) -> Logger {
+        return Logger(className: "\(Mirror(reflecting: logged).subjectType)", configuration: configuration)
     }
     
 }

@@ -5,6 +5,6 @@ public protocol Loggable {
 
 extension Loggable {
     public var log: Logger {
-        return Logger.getLog()
+        return Logger.getLog(logged: self)
     }
 }

@@ -1,5 +1,5 @@
 PODS:
-  - EmojiLog (3.0.0)
+  - EmojiLog (4.0.0)
 
 DEPENDENCIES:
   - EmojiLog (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  EmojiLog: 6763f3d174b2730931ae2e49f2ae391778bca969
+  EmojiLog: 6d5eb6b7027731f145769e809b6b586427738ff2
 
 PODFILE CHECKSUM: 8e5c6283cfafaf5ef1b35e468925bce7c0efb067
 
