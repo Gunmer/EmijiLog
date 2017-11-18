@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EmojiLog'
-  s.version          = '3.0.0'
+  s.version          = '4.0.0'
   s.summary          = 'Swift´s framework to write log.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
